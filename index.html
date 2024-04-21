@@ -1,0 +1,371 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->	
+	<meta name="description" content="">
+	<meta name="author" content="webthemez"> 
+
+<title>Ambulance Assistant</title>
+	<!--This is a link to the Leaflet stylesheet-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+	<!--This is a link to the Leaflet-routing-machine stylesheet-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+	<!--This is a link to the Leaflet JavaScript library-->
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+	
+	<!-- link to the JQuery library-->
+    <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Creative and Descriptive Paper Title." />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>	
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+	<!--[if lte IE 8]>
+		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+	<![endif]-->    
+<link rel="stylesheet" href="css/bootstrap.min.css" />     
+<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />	
+<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/da-slider.css" />
+<link rel="stylesheet" href="css/styles.css"/>
+<!-- Font Awesome -->
+<link href="font/css/font-awesome.min.css" rel="stylesheet">
+
+	
+</head>
+
+<body onload='showmap()'>
+<header class="header">
+	<div class="container">
+		<nav class="navbar navbar-inverse" role="navigation">
+        	<div class="navbar-header">
+	            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+	            </button>
+	            <a href="#" class="navbar-brand scroll-top logo"><b>Ambulance</b>Assistant</a>
+        	</div>
+        	<!--/.navbar-header-->
+	        <div id="main-nav" class="collapse navbar-collapse">
+	            <ul class="nav navbar-nav" id="mainNav">
+		            <li class="active"><a href="#home" class="scroll-link">Home</a></li>
+					<li><a href="#aboutUs" class="scroll-link">Do You Know</a></li>
+					<li><a href="#portfolio" class="scroll-link">Hospitals</a></li>
+					<li><a href="#contactUs" class="scroll-link">Functions</a></li> 
+	            </ul>
+	        </div>
+	        <!--/.navbar-collapse-->
+	    </nav>
+	    <!--/.navbar-->
+	</div>
+	<!--/.container-->
+</header>
+<!--/.header-->
+<div id="#top"></div>
+<section id="home">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item">
+          <img data-src="images/ambulance.jpg" alt="First slide" src="images/ambulance.jpg" class='carousel-inner' />
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Quick Responce</h1>
+              <h3>It should take 8 minutes for the ambulance to arrive if the call is life threatening of an emergency.</h3>
+              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>-->
+            </div>
+          </div>
+        </div>
+        <div class="item active">
+          <img data-src="images/ambulance2.png" alt="Second slide" src="images/ambulance2.png" class='carousel-inner'>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Time Is Life</h1>
+              <h3>On time first care could significantly reduce pain and limit the impact of the illness or injury.</h3>
+              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img data-src="images/AE.jpg" alt="Third slide" src="images/AE.jpg" class='carousel-inner'>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 id="">Emergency Department</h1>
+              <h3>Stand By 24/7, Just For Patients.</h3>
+              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+<div class="actionPanel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 ">
+                        <h3>Learn more about NHS.</h3>
+                    </div>
+                    <div class="col-sm-3 ">
+                        <a href="https://www.nhs.uk/" class="btn btn-extra-large btn-primary spclBtn">Start Now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<section id="aboutUs" class="page-section darkBg pDark pdingBtm30">
+	<div class="container">
+							    <div class="heading text-center">
+								<!-- Heading -->
+								<h2>Do you know?</h2>								 
+								<p>This website based on GIS, providing the multiple helps for Pations and First Responders.</p>
+							</div>
+							
+								<div class="row">
+									<div class="col-md-4 col-sm-4">										
+											<h3><i class="fa fa-desktop color"></i> &nbsp; NHS is under huge pressure</h3>
+											<!-- Paragraph -->
+											<p>'The number of ambulance emergency calls that received a face-to-face response grew steadily between 2011-12 and 2016-17 by 2.9% per year on average from 6.1 million to 6.9 million. In 2017, the way ambulance incidents were recorded changed making direct comparison to previous years difficult. Between 2018-19 and 2019-20, the number of incidents increased by 4.6% from 8.4 million to 8.8 million. In 2020-21, the year of the pandemic, the number of incidents fell by 1.5% to 8.7 million before increasing by 2.6% to 8.9 million in 2021-22'[1].</p>										
+									</div>
+									<div class="col-md-4 col-sm-4">										
+											<!-- Heading -->
+											<h3><i class="fa fa-cloud color"></i> &nbsp;Importance of fast ambulance for patients</h3>
+											<!-- Paragraph -->
+											<p>During emergencies, prehospital medical care and patient transport are successfully provided by ambulance and paramedic services. It is possible to reduce the severity of the damages inflicted on the patient’s health due to ambulance services. Effective patient assessment and transfer are greatly facilitated in dangerous and stressful circumstances thanks to ambulance equipment and the paramedics’ capabilities. Paramedics can perform all of the services that different medical professionals can individually and separately provide. With regular communication between ambulances, hospitals, and emergency doctors or medical personnel, it is possible to guarantee that patients receive the best care, advice, and treatment in the fastest way possible.</p> 										
+									</div>
+									<div class="col-md-4 col-sm-4">										
+											<!-- Heading -->
+											<h3><i class="fa fa-home color"></i> &nbsp;What situations can be helped?</h3>
+											<!-- Paragraph -->
+											<p>This website aims to help those patients who need help at remote places located in the closet hospital as soon as possible. On the other hand, this website could provide navigation for ambulance drivers, helping them get hospital soon. Imagine that you are travelling to a new place where you've never been before, enjoying the fantastic natural views. But suddenly, you fell because focusing so much on the nice landscape and cracked your arm. In this situation, prompt first care is most important. The functions of the website could help you find the closest hospital and get there as soon as possible. Saving time not only helps you to receive treatment but also gives other people who may need ambulance service next.</p> 										
+									</div>
+								</div>
+							</div>
+	<!--/.container-->
+ 
+
+<section id="portfolio" class="page-section section appear clearfix">	
+			<div class="container">
+				
+		    <div class="heading text-center">
+								<!-- Heading -->
+								<h2>Hospitals in England</h2>								
+								<p>There are the part of hospitals in England.</p>
+							</div>
+					
+                        <div class="row">
+                          <nav id="filter" class="col-md-12 text-center">
+                            <ul>
+                              <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
+                              <li><a href="#"  class="btn-theme btn-small" data-filter=".webdesign" >Leeds</a></li>
+                              <li><a href="#"  class="btn-theme btn-small" data-filter=".photography">Scarborough</a></li>
+                              <li ><a href="#" class="btn-theme btn-small" data-filter=".print">York</a></li>
+                            </ul>
+                          </nav>
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="portfolio-items isotopeWrapper clearfix" id="3">
+							  
+                                <article class="col-md-4 isotopeItem webdesign">
+									<div class="portfolio-item">
+										<img src="images/portfolio/Leeds Dental Institute.jpg" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<a href="images/portfolio/Leeds Dental Institute.jpg" class="fancybox"><h5>Leeds Dental Institute</h5>
+												<i class="fa fa-plus-circle fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                           
+								
+
+                                <article class="col-md-4 isotopeItem webdesign">
+									<div class="portfolio-item">
+										<img src="images/portfolio/St James's University Hospital.jpg" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<a href="images/portfolio/St James's University Hospital.jpg" class="fancybox"><h5>St James's University Hospital</h5>
+												<i class="fa fa-plus-circle fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem webdesign">
+									<div class="portfolio-item">
+										<img src="images/portfolio/Seacroft Hospital.jpg" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<a href="images/portfolio/Seacroft Hospital.jpg" class="fancybox"><h5>Seacroft Hospital</h5>
+												<i class="fa fa-plus-circle fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem photography">
+									<div class="portfolio-item">
+										<img src="images/portfolio/Scarborough General Hospital (England).jpg" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<a href="images/portfolio/Scarborough General Hospital (England).jpg" class="fancybox"><h5>Scarborough General Hospital (England)</h5>
+												<i class="fa fa-plus-circle fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem webdesign">
+									<div class="portfolio-item">
+										<img src="images/portfolio/Chapel Allerton Hospital.jpg" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<a href="images/portfolio/Chapel Allerton Hospital.jpg" class="fancybox"><h5>Chapel Allerton Hospital</h5>
+												<i class="fa fa-plus-circle fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem print">
+									<div class="portfolio-item">
+										<img src="images/portfolio/The Retreat.jpg" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<a href="images/portfolio/The Retreat.jpg" class="fancybox"><h5>The Retreat</h5>
+												<i class="fa fa-plus-circle fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                         
+                                </div>
+                                        
+							</div>
+                                     
+
+							</div>
+                        </div>
+				
+			</div>	
+</section>
+
+
+<section id="contactUs" class="page-section">
+	<div class="container">
+    
+		<div class="row">
+                <div class="heading text-center">
+								<!-- Heading -->
+								<h2>Functions</h2> 
+								<p>There are many services provided by this website. Try them now!</p>
+							</div> 
+            </div>
+			<h3><i class="fa fa-desktop color"></i> Enter coordinates here to route</h3>
+			<form id="coordinate" class="form-inline">
+					<div class="form-group">
+						<label for="latitude" class="sr-only">Latitude:</label>
+						<input type="number" class="form-control"  id="latitude" placeholder="Enter latitude" value="54.28748197694775">
+					</div>
+					<div class="form-group">
+						<label for="longitude" class="sr-only">Longitude:</label>
+						<input type="number" class="form-control"  id="longitude" placeholder="Enter longitude" value="-0.38999780280788093">
+					</div>
+					
+					<button type="button" class="btn btn-primary"  onclick='route()'>Find Nearest Hospital</button>
+			</form>
+
+
+
+					<div class="row mrgn30">
+					<h3><i class="fa fa-cloud color"></i> &nbsp;Search a hospital by name</h3>
+                        <!-- add form to recieve the value typed by users-->
+					<form id="searchForm" class="form-inline justify-content-center mt-4">
+						<div class="form-group mb-2">
+							<input type="text" class="form-control" id="hospitalName"  placeholder="Enter hospital name" aria-label="Hospital Name">
+						</div>
+						<button type="button" class="btn btn-primary mb-2" onclick='search()'>Search</button>
+					</form>
+					<div id="results" class="mt-3" style="color:white;"></div>
+
+					
+					<div class="container my-4">
+						<div id="mapcontainer" style="width: 100%; height: 700px;" class="mb-3"></div>
+						
+						<div class="text-center">
+							<button onclick='fetchData()' class="btn btn-primary mr-2">Show All Hospitals in England</button>
+							<button onclick='clearData()' class="btn btn-secondary mr-2">Clear</button>
+						</div>
+
+						<div id="results" class="mt-3 p-3 border rounded"></div>
+					</div>
+
+
+
+					</div>
+	<!--/.container-->
+</section>
+<div>
+	<h2>Reference</h2>
+	<p style='color:white'>[1]Written evidence from the Department of Health and Social Care (AES0014), QQ 1–2 (Prof Peter Murphy), QQ 12, 24, 26 avaliable from: https://committees.parliament.uk/writtenevidence/113067/html/</p></div> 
+
+<!--/.page-section-->
+<section class="copyright">
+     <div class="container">
+      <div class="row">
+        <div class="col-sm-12">          
+           <div class="pull-left copyRights">Copyright 2014 All Rights Reserved</div>          <div class="pull-right webThemez">Template by <a href="http://webThemez.com"> WebThemez.com</a></div>  
+        </div>
+      </div>  <!-- / .row -->
+    </div>
+</section>
+    <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
+<script src="js/modernizr-latest.js"></script>
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>    
+<script src="js/bootstrap.min.js" type="text/javascript"></script>	 
+<script src="js/jquery.isotope.min.js" type="text/javascript"></script>
+<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
+<script src="js/jquery.nav.js" type="text/javascript"></script>
+<script src="js/jquery.cslider.js" type="text/javascript"></script> 
+<script src="js/custom.js" type="text/javascript"></script>
+</body>
+</html>
